@@ -63,7 +63,7 @@ morsetab = collections.OrderedDict([
 ])
 
 
-def _split_message(message):
+def _split_message(message)   :
     """
     >>> _split_message("SOS SOS")
     [['S', 'O', 'S'], ['S', 'O', 'S']]
@@ -74,7 +74,7 @@ def _split_message(message):
     >>> _split_message("  SOS SOS")
     [[], [], ['S', 'O', 'S'], ['S', 'O', 'S']]
     """
-    word_sep = " "
+    word_sep=" "
     return list(map(list, message.split(word_sep)))
 
 
