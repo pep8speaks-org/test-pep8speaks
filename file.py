@@ -89,6 +89,22 @@ def _encode_morse(message):
     """
     return [morsetab.get(c.upper(), '?') for c in message]
 
+def _encode_to_morse_string(message, letter_sep):
+    """
+    >>> message = "SOS"
+    >>> _encode_to_morse_string(message, letter_sep=' '*3)
+    '...   ---   ...'
+
+    >>> message = " SOS"
+    >>> _encode_to_morse_string(message, letter_sep=' '*3)
+    '     ...   ---   ...'
+    """
+    def to_string(i, s):
+        if i == 0 and s == ' ':
+            return '  '
+        return s
+    return letter_sep.join([to_string(i, s) for i, s in enumerate(_encode_morse(message))])
+
 
 def _encode_to_morse_string(message, letter_sep):
     """
