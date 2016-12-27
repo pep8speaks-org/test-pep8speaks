@@ -1,10 +1,10 @@
 message:
   opened:
-    footer: "Hello @{name}, Thank you for everything !"
-    header: "Bye bye!"
+    header: "Hello @{name}, Thank you for everything !"
+    footer: "Bye bye!"
   updated:
-    footer: "Hello @{name}, Thank you for updating man!"
-    header: "Bye !"
+    header: "Hello @{name}, Thank you for updating man!"
+    footer: "Bye !"
 
 ignore:
  - W391
