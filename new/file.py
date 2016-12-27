@@ -104,23 +104,44 @@ def _encode_to_morse_string(message, letter_sep):
         if i == 0 and s == ' ':
             return '  '
         return s
-    return letter_sep.join([to_string(i, s) for i, s in enumerate(_encode_morse(message))])
+    return letter_sep.join([to_string(i, s) for i, s in
+                            enumerate(_encode_morse(message))])
+
+
+def _encode_to_morse_string(message, letter_sep):
+    """
+    >>> message = "SOS"
+    >>> _encode_to_morse_string(message, letter_sep=' '*3)
+    '...   ---   ...'
+
+    >>> message = " SOS"
+    >>> _encode_to_morse_string(message, letter_sep=' '*3)
+    '     ...   ---   ...'
+    """
+    def to_string(i, s):
+        if i == 0 and s == ' ':
+            return '  '
+        return s
+    return letter_sep.join([to_string(i, s) for i, s in
+                            enumerate(_encode_morse(message))])
 
 
 def _encode_binary(message, on=1, off=0):
     """
     >>> message = "SOS"
     >>> _encode_binary(message)
-    [1, 0, 1, 0, 1, 0, 0, 0, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 0, 0, 0, 1, 0, 1, 0, 1]
+    [1, 0, 1, 0, 1, 0, 0, 0, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 0,
+     0, 0, 1, 0, 1, 0, 1]
 
     >>> _encode_binary(message, on='1', off='0')
-    ['1', '0', '1', '0', '1', '0', '0', '0', '1', '1', '1', '0', '1', '1', '1', '0', '1', '1', '1', '0', '0', '0', '1', '0', '1', '0', '1']
+    ['1', '0', '1', '0', '1', '0', '0', '0', '1', '1', '1', '0',
+    '1', '1', '1', '0', '1', '1', '1', '0', '0', '0', '1', '0', '1', '0', '1']
     """
-    l = _encode_morse(message)
+    l_message = _encode_morse(message)
     s = ' '.join(l)
-    l = list(s)
+    l_message = list(s)
     bin_conv = {'.': [on], '-': [on] * 3, ' ': [off]}
-    l = map(lambda symb: [off] + bin_conv[symb], l)
+    l_message = map(lambda symb: [off] + bin_conv[symb], l_message)
     lst = [item for sublist in l for item in sublist]  # flatten list
     return lst[1:]
 
@@ -139,7 +160,8 @@ def _encode_to_binary_string(message, on, off):
         if i == 0 and s == off:
             return off * 4
         return s
-    return ''.join(to_string(i, s) for i, s in enumerate(_encode_binary(message, on=on, off=off)))
+    return ''.join(to_string(i, s) for i, s in
+                   enumerate(_encode_binary(message, on=on, off=off)))
 
 
 def encode(message, encoding_type='default', letter_sep=' ' * 3, strip=True):
@@ -188,7 +210,8 @@ def encode(message, encoding_type='default', letter_sep=' ' * 3, strip=True):
     elif encoding_type == 'binary':
         return _encode_to_binary_string(message, on='1', off='0')
     else:
-        raise NotImplementedError("encoding_type must be in %s" % allowed_encoding_type)
+        raise NotImplementedError("encoding_type must be in "
+                                  "%s" % allowed_encoding_type)
 
 
 def main():
