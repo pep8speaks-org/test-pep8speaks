@@ -5,5 +5,3 @@ message:
 ignore:
  - W391
  - E203
- - W*
- - E*
