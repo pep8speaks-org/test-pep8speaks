@@ -1,0 +1,9 @@
+message:
+  footer: "Hello @{name}, Thank you for everything !"
+  header: "Bye bye!"
+
+ignore:
+ - W391
+ - E203
+ - W*
+ - E*
