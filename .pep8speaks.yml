@@ -9,3 +9,6 @@ message:
 ignore:
  - W391
  - E203
+
+scanner:
+    diff_only: True
