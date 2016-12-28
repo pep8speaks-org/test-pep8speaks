@@ -35,5 +35,8 @@ def main() :
             # Do things for windows
             pass
 
+def new_function():
+    return 0
+
 if __name__ == '__main__':
     main()
