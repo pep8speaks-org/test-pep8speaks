@@ -19,7 +19,7 @@ def main() :
 
     target = "http://ping-me.himanshumishra.in/ping/"
     email = ping_me.authenticate.extract_email()
-    key = ping_me.authenticate.extract_password()
+    key=ping_me.authenticate.extract_password()
     data_t = {
         "email": email,
         "password": key
