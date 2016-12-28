@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# !/usr/bin/env python
+#!/usr/bin/env python
 
 """Receive request to show notification"""
 import ast
@@ -10,8 +10,7 @@ import subprocess
 from ping_me.utils import cryptex
 import ping_me.authenticate
 
-
-def main():
+def main() :
     """Executed by cron every minute. Sends POST request to recieve
     reminder for upcoming minute."""
 
