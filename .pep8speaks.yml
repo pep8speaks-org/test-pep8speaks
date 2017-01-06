@@ -15,4 +15,4 @@ pycodestyle_config:
   ignore:
     - W391
     - E203
-  show-pep8: True
+  statistics: True
