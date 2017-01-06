@@ -9,7 +9,7 @@ message:
 scanner:
     diff_only: True
 
-pycodestyle_config:
+pycodestyle:
   max-line-length: 100
   count: True
   ignore:
