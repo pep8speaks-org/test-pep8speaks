@@ -6,9 +6,12 @@ message:
     header: "Hello @{name}, Thank you for updating man!"
     footer: "Bye !"
 
-ignore:
- - W391
- - E203
-
 scanner:
     diff_only: True
+
+pycodestyle_config:
+  ignore:
+    - W391
+    - E203
+  max-line-length: 100
+  count: True
