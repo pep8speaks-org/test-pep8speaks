@@ -10,13 +10,16 @@ import subprocess
 from ping_me.utils import cryptex
 import ping_me.authenticate
 
+def another_one(new) :
+    pass
+
 def main() :
     """Executed by cron every minute. Sends POST request to recieve
     reminder for upcoming minute."""
 
     target = "http://ping-me.himanshumishra.in/ping/"
     email = ping_me.authenticate.extract_email()
-    key = ping_me.authenticate.extract_password()
+    key=ping_me.authenticate.extract_password()
     data_t = {
         "email": email,
         "password": key
@@ -34,6 +37,9 @@ def main() :
         elif sys.platform in ['win32', 'win64']:
             # Do things for windows
             pass
+
+def new_function():
+    return 0
 
 if __name__ == '__main__':
     main()
