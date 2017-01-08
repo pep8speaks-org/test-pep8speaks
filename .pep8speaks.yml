@@ -3,6 +3,7 @@ message:
     header: "Hello @{name}, Thank you for everything !"
     footer: "Bye bye!"
   updated:
+  
     header: "Hello @{name}, Thank you for updating man!"
     footer: "Bye !"
 
