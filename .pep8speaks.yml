@@ -15,4 +15,3 @@ pycodestyle:
   ignore:
     - W391
     - E203
-  statistics: True
