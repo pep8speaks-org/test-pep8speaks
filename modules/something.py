@@ -1,1 +1,4 @@
 print()
+
+def main():
+  pass
