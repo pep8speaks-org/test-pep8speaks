@@ -2,7 +2,7 @@
 #!/usr/bin/env python
 
 """Receive request to show notification"""
-import ast;
+import ast
 import requests
 import sys
 import subprocess
