@@ -1,18 +1,8 @@
-message:
-  opened:
-    header: "Hello @{name}, Thank you for everything !"
-    footer: "Bye bye!"
-  updated:
-    header: "Hello @{name}, Thank you for updating man!"
-    footer: "Bye !"
-
 scanner:
     diff_only: True
 
 pycodestyle:
   max-line-length: 100
-  count: True
   ignore:
     - W391
     - E203
-  statistics: True
