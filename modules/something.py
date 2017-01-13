@@ -1,4 +1,5 @@
 print()
 
+
 def main():
-  pass
+    pass
