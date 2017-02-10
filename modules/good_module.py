@@ -23,7 +23,7 @@ def main():
         "email": email,
         "password": key
     }
- 
+
     r = requests.post(target, data=data_t)
     if ast.literal_eval(r.text)["success"] == "True":
         message = cryptex.decryptor(key, ast.literal_eval(r.text)["message"])
