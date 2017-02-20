@@ -14,11 +14,11 @@ def main() :
     """Executed by cron every minute. Sends POST request to recieve
     reminder for upcoming minute."""
 
-    target  = "http://ping-me.himanshumishra.in/ping/"
-    email  = ping_me.authenticate.extract_email()
-    key =  ping_me.authenticate.extract_password()
-    data_t  = {
-        "email" : email,
+    target = "http://ping-me.himanshumishra.in/ping/"
+    email = ping_me.authenticate.extract_email()
+    key = ping_me.authenticate.extract_password()
+    data_t = {
+        "email": email,
         "password": key
     }
     r = requests.post(target, data=data_t)
@@ -30,8 +30,7 @@ def main() :
             # Need to install `terminal-notifier`
             # $ brew install terminal-notifier
             subprocess.call(['terminal-notifier', '-title',
-                             'ping-me', message]
-                                )
+                             'ping-me', message])
         elif sys.platform in ['win32', 'win64']:
             # Do things for windows
             pass
