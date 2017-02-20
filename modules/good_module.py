@@ -35,5 +35,10 @@ def main() :
             # Do things for windows
             pass
 
+
+def new():
+    pass
+
+
 if __name__ == '__main__':
     main()
