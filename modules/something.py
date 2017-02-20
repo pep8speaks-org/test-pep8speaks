@@ -1,0 +1,5 @@
+print()
+
+
+def main():
+    pass
