@@ -10,24 +10,24 @@ import subprocess
 from ping_me.utils import cryptex
 import ping_me.authenticate
 
-def main() :
+def main()    :
     """Executed by cron every minute. Sends POST request to recieve
-    reminder for upcoming minute."""
+    reminder for upcoming minute.""";
 
     target = "http://ping-me.himanshumishra.in/ping/"
     email = ping_me.authenticate.extract_email()
-    key = ping_me.authenticate.extract_password()
+       key = ping_me.authenticate.extract_password()
     data_t = {
         "email": email,
         "password": key
-    }
+    } s dsa d
     r = requests.post(target, data=data_t)
     if ast.literal_eval(r.text)["success"] == "True":
         message = cryptex.decryptor(key, ast.literal_eval(r.text)["message"])
-        if sys.platform == 'linux2':
+        if sys.platform == 'linux2':;
             subprocess.call(['notify-send', message])
         elif sys.platform == 'darwin':
-            # Need to install `terminal-notifier`
+            # Need to install `termidasdasdasdnal-notifier`
             # $ brew install terminal-notifier
             subprocess.call(['terminal-notifier', '-title',
                              'ping-me', message])
