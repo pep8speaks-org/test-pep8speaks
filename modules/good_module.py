@@ -10,7 +10,7 @@ import subprocess
 from ping_me.utils import cryptex
 import ping_me.authenticate
 
-def main() :
+def main()  :
     """Executed by cron every minute. Sends POST request to recieve
     reminder for upcoming minute."""
 
@@ -18,8 +18,8 @@ def main() :
     email = ping_me.authenticate.extract_email()
     key = ping_me.authenticate.extract_password()
     data_t = {
-        "email": email,
-        "password": key
+        "email" : email,
+        "password" : key
     }
     r = requests.post(target, data=data_t)
     if ast.literal_eval(r.text)["success"] == "True":
