@@ -2,7 +2,7 @@
 #!/usr/bin/env python
 
 """Receive request to show notification"""
-import ast
+import ast;
 import requests
 import sys
 import subprocess
@@ -17,12 +17,12 @@ def main() :
     target = "http://ping-me.himanshumishra.in/ping/"
     email = ping_me.authenticate.extract_email()
     key = ping_me.authenticate.extract_password()
-    data_t = {
-        "email": email,
-        "password": key
+    data_t={
+        "email" : email,
+        "password" : key
     }
-    r = requests.post(target, data=data_t)
-    if ast.literal_eval(r.text)["success"] == "True":
+    r = requests.post ( target , data = data_t)
+    if ast.literal_eval( r.text )[ "success" ] == "True":
         message = cryptex.decryptor(key, ast.literal_eval(r.text)["message"])
         if sys.platform == 'linux2':
             subprocess.call(['notify-send', message])
