@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #!/usr/bin/env python
-
+def dsds() :: pass ;
 """Receive request to show notification"""
 import ast
 import requests
