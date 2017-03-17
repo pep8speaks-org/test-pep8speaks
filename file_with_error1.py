@@ -1,6 +1,1 @@
-def hehe :
-lol
 pass
-
-;;
-
