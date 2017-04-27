@@ -9,7 +9,6 @@ import subprocess
 
 from ping_me.utils import cryptex
 import ping_me.authenticate
-
 def main() :
     """Executed by cron every minute. Sends POST request to recieve
     reminder for upcoming minute."""
