@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 #!/usr/bin/env python
 
+
+def dsds(): : pass
 """Receive request to show notification"""
 import ast
 import requests
@@ -10,7 +12,8 @@ import subprocess
 from ping_me.utils import cryptex
 import ping_me.authenticate
 
-def main() :
+
+def main():
     """Executed by cron every minute. Sends POST request to recieve
     reminder for upcoming minute."""
 
