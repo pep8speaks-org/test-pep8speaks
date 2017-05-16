@@ -3,4 +3,4 @@ scanner:
 
 pycodestyle:
   max-line-length: 100
-  select: E101,E111
+  select: E101, E111
