@@ -1,3 +1,4 @@
-def main () : pass ;
+def main(): pass;
+
 
 import something
