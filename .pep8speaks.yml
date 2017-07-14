@@ -6,3 +6,5 @@ pycodestyle:
   ignore:
     - W391
     - E203
+  exclude:
+    - file_with_errors.py
