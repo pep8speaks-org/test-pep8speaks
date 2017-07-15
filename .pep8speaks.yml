@@ -1,8 +1,11 @@
+# File : .pep8speaks.yml
+
 scanner:
-    diff_only: True
+    diff_only: True  # If True, errors caused by only the patch are shown
 
 pycodestyle:
-  max-line-length: 100
-  ignore:
-    - W391
-    - E203
+    max-line-length: 79
+    ignore:  # Errors and warnings to ignore
+        - E731
+        - E402
+        
