@@ -6,6 +6,6 @@ scanner:
 pycodestyle:
     max-line-length: 79
     ignore:  # Errors and warnings to ignore
-        - E732
+        - E731
         - E402
         
