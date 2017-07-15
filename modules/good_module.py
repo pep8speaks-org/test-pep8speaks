@@ -6,7 +6,7 @@ import ast
 import requests
 import sys
 import subprocess
-
+f = lambda x, y: htable.ismember_object(x, values)
 from ping_me.utils import cryptex
 import ping_me.authenticate
 
