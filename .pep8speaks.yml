@@ -8,4 +8,5 @@ pycodestyle:
     ignore:  # Errors and warnings to ignore
         - E731
         - E402
-        
+    exclude:
+        - to_exclude/
