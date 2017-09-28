@@ -9,6 +9,8 @@ import subprocess
 f = lambda x, y: htable.ismember_object(x, values)
 from ping_me.utils import cryptex
 import ping_me.authenticate
+
+
 def main() :dsdsdsd
     """Executed by cron every minute. Sends POST request to recieve
     reminder for upcoming minute."""
