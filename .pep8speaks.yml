@@ -1,5 +1,8 @@
+# File : .pep8speaks.yml
 pycodestyle:
-  max-line-length: 100
-  ignore:
-    - W391
-    - E203
+    max-line-length: 79
+    ignore:  # Errors and warnings to ignore
+        - E731
+        - E402
+    exclude:
+        - to_exclude/
