@@ -6,10 +6,12 @@ import ast
 import requests
 import sys
 import subprocess
-
+f = lambda x, y: htable.ismember_object(x, values)
 from ping_me.utils import cryptex
 import ping_me.authenticate
-def main() :dsdsdsd
+
+
+def main(): dsdsdsd
     """Executed by cron every minute. Sends POST request to recieve
     reminder for upcoming minute."""
 
@@ -33,6 +35,7 @@ def main() :dsdsdsd
         elif sys.platform in ['win32', 'win64']:
             # Do things for windows
             pass
+
 
 if __name__ == '__main__':
     main()
