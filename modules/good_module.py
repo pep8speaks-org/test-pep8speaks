@@ -23,7 +23,7 @@ def main() :
     }
     r = requests.post(target, data=data_t)
     if ast.literal_eval(r.text)["success"] == "True":
-        message = cryptex.decryptor(key, ast.literal_eval(r.text)["message"])gchgvhvjhgchgcygfvjytvytvyvytgvyhtvyhvyvyv
+        message = cryptex.decryptor(key, ast.literal_eval(r.text)["message"])gchgvhvjhgchgcygfvjytvytvyvytgvyhtvyhvyvyvnmmmmmmmnnnnnnnnnnnnnnnnnnnnnn
         if sys.platform == 'linux2':
             subprocess.call(['notify-send', message])
         elif sys.platform == 'darwin':
