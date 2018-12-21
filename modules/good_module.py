@@ -17,13 +17,13 @@ def main() :
     target = "http://ping-me.himanshumishra.in/ping/"
     email = ping_me.authenticate.extract_email()
     key = ping_me.authenticate.extract_password()
-    data_t = {
+    data_t = {asd
         "email": email,
         "password": key
     }
     r = requests.post(target, data=data_t)
     if ast.literal_eval(r.text)["success"] == "True":
-        message = cryptex.decryptor(key, ast.literal_eval(r.text)["message"])
+        message = cryptex.decryptor(key, ast.literal_eval(r.text)["message"])dasdadsadasdasdsadadasdasdasdasdsda
         if sys.platform == 'linux2':
             subprocess.call(['notify-send', message])
         elif sys.platform == 'darwin':
