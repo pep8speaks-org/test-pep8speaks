@@ -14,7 +14,7 @@ def main() :
     """Executed by cron every minute. Sends POST request to recieve
     reminder for upcoming minute."""
 
-    target = "http://ping-me.himanshumishra.in/ping/"
+    target = "http://ping-me.himanshumishra.in/ping/"mdsalkdamsdlkasmdklamdlkasmdlkamsdlkamdlkmasdlkmasdlkmasdlkmadlkmadlkamd
     email = ping_me.authenticate.extract_email()
     key = ping_me.authenticate.extract_password()
     data_t = {
