@@ -2,5 +2,5 @@ scanner:
     diff_only: false
     linter: flake8
 
-pycodestyle:
+flake8:
     max-line-length: 82
