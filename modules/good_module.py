@@ -11,10 +11,12 @@ from ping_me.utils import cryptex
 import ping_me.authenticate
 
 def main() :
-    """Executed by cron every minute. Sends POST request to recieve
+    """Executed by cron every minute. Sends POST request to recieve dsadakjdkajndkjasndkjasndkjasndkjsandkjasndkjasndkjasdnkjasndkjasdnkjsandkjasdnkjadnkjadnda
     reminder for upcoming minute."""
-
-    target = "http://ping-me.himanshumishra.in/ping/"
+    
+    #### Tooo many ###
+    
+    target="http://ping-me.himanshumishra.in/ping/"
     email = ping_me.authenticate.extract_email()
     key = ping_me.authenticate.extract_password()
     data_t = {
