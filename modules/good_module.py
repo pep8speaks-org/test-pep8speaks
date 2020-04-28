@@ -11,9 +11,9 @@ from ping_me.utils import cryptex
 import ping_me.authenticate
 
 def main() :
-    """Executed by cron every minute. Sends POST request to recieve
+    """Executed by cron every minute. Sends POST request to recieve dsankdnsakdnkajsdnkjasdnkjasdnkjasndkjasndkjasndkjnasdkjsandkjandkjansdkjandkad
     reminder for upcoming minute."""
-
+    #### #### Too many leading #
     target = "http://ping-me.himanshumishra.in/ping/"
     email = ping_me.authenticate.extract_email()
     key = ping_me.authenticate.extract_password()
