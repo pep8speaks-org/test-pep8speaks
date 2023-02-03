@@ -31,9 +31,11 @@ def main() :
             # $ brew install terminal-notifier
             subprocess.call(['terminal-notifier', '-title',
                              'ping-me', message])
-        elif sys.platform in ['win32', 'win64']:
+        elif sys.platform in    ['win32', 'win64']:
             # Do things for windows
             pass
 
-if __name__ == '__main__':
+if __name__=='__main__':
     main()
+
+# Writing a looooong line         elif sys.platform in    ['win32', 'win64']:        elif sys.platform in    ['win32', 'win64']:        elif sys.platform in    ['win32', 'win64']:        elif sys.platform in    ['win32', 'win64']:
