@@ -1,0 +1,4 @@
+pycodestyle:
+    max-line-length: 81  # Default is 79 in PEP 8
+    ignore:  # Errors and warnings to ignore
+        - E266
